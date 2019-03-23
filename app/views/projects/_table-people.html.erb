@@ -1,0 +1,22 @@
+<table class="table table-striped table-hover">
+    <thead>
+        <tr>
+            <th>Nombre Completo</th>
+            <th>Cargo</th>
+            <th>Departamento</th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        <% @people_list.each do |w| %>
+            <tr>
+                <td><%= w.person.name %>  <%= w.person.lastname %></td>
+                <td><%= w.person.job_title %></td>
+                <td><%= w.person.department %></td>
+                <td><%= link_to 'X', project_workshop_path(w.project.id, w.id), method: :delete %></td>
+            </tr>
+        <% end %>
+        
+    </tbody>
+
+</table>

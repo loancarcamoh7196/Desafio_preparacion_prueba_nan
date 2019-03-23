@@ -1,0 +1,31 @@
+
+
+<div class="container">
+  <div class="row">
+    <div class="col-12"><p>
+  <strong>Name:</strong>
+  <%= @person.name %>
+</p>
+
+<p>
+  <strong>Lastname:</strong>
+  <%= @person.lastname %>
+</p>
+
+<p>
+  <strong>Job title:</strong>
+  <%= @person.job_title %>
+</p>
+
+<p>
+  <strong>Department:</strong>
+  <%= @person.department %>
+</p>
+
+<hr>
+<%= render 'table-workshop' %>
+
+<%= link_to 'Edit', edit_person_path(@person) %> |
+<%= link_to 'Back', people_path %></div>
+  </div>
+</div>
